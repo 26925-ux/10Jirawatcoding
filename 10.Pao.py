@@ -1,20 +1,20 @@
-print("โปรแกรมช่วยคำนวณคะแนนรวม")
+print("\nโปรแกรมคำนวณค่าBMI")
 
-point1 = int(input("กรอกคะแนนวิชาที่1: "))
+weight = int(input("\nกรุณากรอกน้ำหนักของคุณ (กิโลกรัม): "))
+height = int(input("กรุณากรอกส่วนสูงของคุณ (เซนติเมตร): "))
 
-point2 = int(input("กรอกคะแนนวิชาที่2: "))
+BMI = weight / ((height / 100) ** 2)
 
-point3 = int(input("กรอกคะแนนวิชาที่3: "))
+print("\nค่าBMI ของคุณคือ: ", BMI)
 
-total_point =  point1 + point2 + point3 
+if BMI < 18.5:
+    print("คุณมีน้ำหนักน้อย ")
 
-print("คะแนนรวมของคุณคือ:", total_point)
+elif BMI >= 18.5 and BMI < 25:
+    print("คุณมีน้ำหนักปกติ ")
 
-if total_point >= 80 :
-    print("ระดับคะแนน: ดีเยี่ยม")
-
-elif total_point >= 60 :
-    print("ระดับคะแนน: ผ่าน")
+elif BMI >= 25 and BMI < 30:
+    print("คุณมีน้ำหนักเกิน")
 
 else:
-    print("ระดับคะแนน: ควรปรับปรุง")
+    print("คุณอ้วนมาก")
